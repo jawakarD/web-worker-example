@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Worker</title>
+  </head>
+  <body>
+    <p>
+      <label>
+        Choose a filter to apply
+        <select id="filter">
+          <option value="none">none</option>
+          <option value="grayscale">grayscale</option>
+          <option value="brighten">brighten by 20%</option>
+          <option value="threshold">threshold</option>
+        </select>
+      </label>
+    </p>
+   <form accept-charset="utf-8" action="asd">
+     <label>Image to filter</label>
+     <input type="file" name="image" id="image-to-filter" alt="Enter image to filter"> 
+   </form>
+   <canvas id="output"></canvas>
+   <script src="script.js"></script>
+  </body>
+</html>
