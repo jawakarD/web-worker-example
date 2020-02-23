@@ -23,7 +23,7 @@ Filters.threshold = ({data: d}) => {
     var r = d[i];
     var g = d[i + 1];
     var b = d[i + 2];
-    var v = 0.2126 * r + 0.7152 * g + 0.0722 * b >= 10 ? 255 : 0;
+    var v = 0.2126 * r + 0.7152 * g + 0.0722 * b >= 90 ? 255 : 0;
     d[i] = d[i + 1] = d[i + 2] = v;
   }
 };
@@ -31,5 +31,5 @@ Filters.threshold = ({data: d}) => {
 onmessage = e => {
   const {imageData, filter} = e.data;
   Filters[filter](imageData);
-  postMessage(imageData, [imageData.data.buffer]);
+  postMessage(imageData);
 };
